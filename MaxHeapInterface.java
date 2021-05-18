@@ -1,49 +1,41 @@
-package project4package;
+package proj4;
 
-public interface MaxHeapInterface {
-	public interface MaxHeapInterface<T extends Comparable<? super T>>
-	{
-	    /** Adds a new entry to this heap.
-	     @param newEntry  An object to be added. */
-	    public void add(T newEntry);
+/**
+An interface for the ADT maxheap.
 
-	    /** Removes and returns the largest item in this heap.
-	     @return  Either the largest object in the heap or,
-	     if the heap is empty before the operation, null. */
-	    public T removeMax();
+@author Frank M. Carrano
+@author Timothy M. Henry
+@version 5.0
+*/
+public interface MaxHeapInterface<T extends Comparable<? super T>>
+{
+   /** Adds a new entry to this heap.
+    @param newEntry  An object to be added. */
+   public void add(T newEntry);
 
-	    /** Retrieves the largest item in this heap.
-	     @return  Either the largest object in the heap or,
-	     if the heap is empty, null. */
-	    public T getMax();
+   /** Removes and returns the largest item in this heap.
+    @return  Either the largest object in the heap or,
+    if the heap is empty before the operation, null. */
+   public T removeMax();
 
-	    /** Detects whether this heap is empty.
-	     @return  True if the heap is empty, or false otherwise. */
-	    public boolean isEmpty();
+   /** Retrieves the largest item in this heap.
+    @return  Either the largest object in the heap or,
+    if the heap is empty, null. */
+   public T getMax();
 
-	    /** Gets the size of this heap.
-	     @return  The number of entries currently in the heap. */
-	    public int getSize();
+   /** Detects whether this heap is empty.
+    @return  True if the heap is empty, or false otherwise. */
+   public boolean isEmpty();
 
-	    /** Removes all entries from this heap. */
-	    public void clear();
-	    
-	    public int getSwaps();
-	    
-	    public int getSeqSwaps();
-	    
-	    public Object[] getHeap();
-	    
-	} // end MaxHeapInterface
+   /** Gets the size of this heap.
+    @return  The number of entries currently in the heap. */
+   public int getSize();
 
-	public void add(int currentNum);
-
-	public Object[] getHeap();
-
-	public String getSeqSwaps();
-
-	public void removeMax();
-
-	public String getSwaps();
-	
-}
+   /** Removes all entries from this heap. */
+   public void clear();
+   
+   int length = 0;
+   public int getNumSwaps();
+   public int getNumSwapsS();
+   public T[] getHeap();
+} // end MaxHeapInterface
